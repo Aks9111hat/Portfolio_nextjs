@@ -2,6 +2,8 @@
 
 import { motion, useScroll, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
+import Brain from "@/components/brain";
 
 const AboutPage = () => {
 
@@ -25,14 +27,21 @@ const AboutPage = () => {
                 <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:1/2">
                     {/* BIOGRAPHY CONTAINER */}
                     <div className="flex flex-col gap-12 justify-center">
+                        <Image
+                            src="/man.png"
+                            alt=""
+                            width={112}
+                            height={112}
+                            className="w-28 h-28 rounded-full object-cover"
+                        />
                         {/* BIO TITLE */}
                         <h1 className="font-bold text-lg md:text-3xl lg:text-5xl xl:text-6xl">BIOGRAPHY</h1>
                         {/* BIO DESCRIPTION */}
-                        <p className="text-xs md:text-sm lg:text-lg xl:text-xl 2xl:text-3xl">
+                        <p className="text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-serif">
                             Hello! I'm Akshat Srivastava, a web developer and Associate Software Developer at VirtuBox Infotech. With a B.E. in Computer Engineering from Thapar Institute, I excel in HTML, CSS, JavaScript, and more. I've led projects like a Gym Management System and CovidContact App, and I'm passionate about creating dynamic web solutions.
                         </p>
                         {/* BIO QUOTE */}
-                        <span className="italic">
+                        <span className="italic text-xs md:text-sm lg:text-lg xl:text-xl 2xl:text-2xl">
                             I'm passionate about creating dynamic web solutions that enhance user experiences and drive innovation.
                         </span>
                         {/* BIO SIGN SVG */}
@@ -147,38 +156,6 @@ const AboutPage = () => {
                             transition={{ delay: 0.2 }} className="font-bold text-2xl">EXPERIENCE</motion.h1>
                         {/* EXPERIENCE LIST */}
                         <motion.div initial={{ x: "-300px" }} animate={isExperienceRefInView ? { x: "0" } : {}} className="">
-                            {/* EXPERIENCE LIST ITEM 1 */}
-                            <div className="flex justify-between h-48">
-                                {/* LEFT */}
-                                <div className="w-1/3">
-                                    {/* JOB TITLE */}
-                                    <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                                        Associate Software Developer
-                                    </div>
-                                    {/* JOB DESC */}
-                                    <div className="p-3 text-sm italic">
-                                        Software Development using HTML, CSS, and JavaScript
-                                    </div>
-                                    {/* JOB DATE */}
-                                    <div className="p-3 text-red-400 text-sm font-semibold">
-                                        2024 - Present
-                                    </div>
-                                    {/* JOB COMPANY */}
-                                    <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-                                        VirtuBox
-                                    </div>
-                                </div>
-                                {/* CENTER */}
-                                <div className="w-1/6 flex items-center justify-around">
-                                    {/* LINE */}
-                                    <div className="w-1 h-full bg-gray-600 rounded relative">
-                                        {/* LINE CIRCLE */}
-                                        <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
-                                    </div>
-                                </div>
-                                {/* RIGHT */}
-                                <div className="w-1/3"></div>
-                            </div>
                             {/* EXPERIENCE LIST ITEM 2 */}
                             <div className="flex justify-between h-48">
                                 {/* LEFT */}
@@ -195,11 +172,11 @@ const AboutPage = () => {
                                 <div className="w-1/3">
                                     {/* JOB TITLE */}
                                     <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                                        Associate Software Developer
+                                        Freelance Web Developer
                                     </div>
                                     {/* JOB DESC */}
                                     <div className="p-3 text-sm italic">
-                                        Software Development using HTML, CSS, and JavaScript
+                                        Website Development using latest technologies and best tools to deliver best in class product.
                                     </div>
                                     {/* JOB DATE */}
                                     <div className="p-3 text-red-400 text-sm font-semibold">
@@ -207,7 +184,7 @@ const AboutPage = () => {
                                     </div>
                                     {/* JOB COMPANY */}
                                     <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-                                        VirtuBox
+                                        Freelancer
                                     </div>
                                 </div>
                             </div>
@@ -229,7 +206,7 @@ const AboutPage = () => {
                                     </div>
                                     {/* JOB COMPANY */}
                                     <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-                                        VirtuBox
+                                        VirtuBox Infotech ltd. pvt.
                                     </div>
                                 </div>
                                 {/* CENTER */}
@@ -247,8 +224,8 @@ const AboutPage = () => {
                     </div>
                 </div>
                 {/* SVG CONTAINER */}
-                <div className="hidden lg:block w-1/3 xl:1/2">
-
+                <div className="hidden lg:block w-1/3 sticky top-0 z-30 xl:w-1/2">
+                    <Brain scrollYProgress={scrollYProgress} />
                 </div>
 
             </div>

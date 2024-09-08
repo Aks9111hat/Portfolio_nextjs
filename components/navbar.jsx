@@ -87,13 +87,13 @@ const navbar = () => {
                     <Image src="/github.png" alt="GitHub" width={24} height={24} />
                 </Link>
                 <Link href="https://www.linkedin.com/in/akshat-srivastava-300411211/" rel="noopener noreferrer" target="_blank">
-                    <Image src="/linkedin.png" alt="GitHub" width={24} height={24} />
+                    <Image src="/linkedin.png" alt="LinkedIn" width={24} height={24} />
                 </Link>
                 <Link href="https://www.instagram.com/srivastaveakshat?igsh=MXdvNXJjNHZteDJobA==" rel="noopener noreferrer" target="_blank">
-                    <Image src="/instagram.png" alt="GitHub" width={24} height={24} />
+                    <Image src="/instagram.png" alt="Instagram" width={24} height={24} />
                 </Link>
-                <Link href="https://github.com/Aks9111hat" rel="noopener noreferrer" target="_blank">
-                    <Image src="/facebook.png" alt="GitHub" width={24} height={24} />
+                <Link href="https://m.facebook.com/profile.php?id=100004763389492&__n=K" rel="noopener noreferrer" target="_blank">
+                    <Image src="/facebook.png" alt="Facebook" width={24} height={24} />
                 </Link>
             </div>
             {/* RESPONSIVE MENU */}

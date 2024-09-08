@@ -10,6 +10,14 @@ const nextConfig = {
                 protocol: "https",
                 hostname: "i.ibb.co",
             },
+            {
+                protocol: "https",
+                hostname: "static.virtubox.io",
+            },
+            {
+                protocol: "https",
+                hostname: "images.pexels.com",
+            },
         ]
     }
 };

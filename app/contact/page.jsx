@@ -35,8 +35,8 @@ const ContactPage = () => {
         <motion.div className="h-full" initial={{ y: "-200vh" }} animate={{ y: "0%" }} transition={{ duration: 1 }}>
             <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
                 {/* TEXT CONTAINER */}
-                <div className="h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
-                    <div className="div">
+                <div className="h-1/4 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
+                    <div className="div flex flex-row items-center">
                         {text.split("").map((letter, index) => (
                             <motion.span
                                 key={index}
@@ -47,7 +47,7 @@ const ContactPage = () => {
                                     repeat: Infinity,
                                     delay: index * 0.1,
                                 }}
-                                className="text-2xl lg:text-4xl font-bold"
+                                className="text-xl sm:text-2xl lg:text-4xl font-bold"
                             >
                                 {letter}
                             </motion.span>
@@ -56,10 +56,10 @@ const ContactPage = () => {
                     </div>
                 </div>
                 {/* FORM CONTAINER */}
-                <form 
-                 onSubmit={sendEmail}
-                 ref={form} 
-                 className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24">
+                <form
+                    onSubmit={sendEmail}
+                    ref={form}
+                    className="h-3/4 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-5 md:p-24">
                     <span>Dear Akshat, </span>
                     <textarea
                         rows={6}

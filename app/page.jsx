@@ -6,7 +6,12 @@ import  Link  from 'next/link';
 
 const Homepage = () => {
   return(
-    <motion.div className="h-full" initial={{y:"-200vh"}} animate={{y:"0%"}} transition={{duration:1}}>
+    <motion.div 
+    className="h-full" 
+    initial={{y:"-200vh"}} 
+    animate={{y:"0%"}} 
+    transition={{duration:1}}
+    >
       <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
         {/* IMAGE CONTAINER  */}
         <div className="h-1/2 lg:h-full lg:w-1/2 relative">
@@ -19,7 +24,7 @@ const Homepage = () => {
             Crafting Digital Experiences, Designing Tomorrow.
            </h1>
            {/* DESCRIPTION */}
-           <p className="text-xs md:text-sm lg:text-xl xl:text-2xl">  Welcome to my digital canvas, where innovation and creativity
+           <p className="text-xs md:text-sm lg:text-xl xl:text-2xl font-serif">  Welcome to my digital canvas, where innovation and creativity
                               converge. With a keen eye for aesthetics and a mastery of code, my
                               portfolio showcases a diverse collection of projects that reflect my
                               commitment to excellence.
